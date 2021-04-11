@@ -1,6 +1,6 @@
 describe('Delivery SignUp Yassir', () => {
     it('Delivry Man SignUp Test', () => {
-    // Go to Yassi Express WebSite
+    // Go to Yassir Express WebSite
     cy.visit("https://express.yassir.com/");
 
     // Assert and click on SignUp Delivery man button
