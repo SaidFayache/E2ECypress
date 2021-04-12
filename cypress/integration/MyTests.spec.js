@@ -1,9 +1,13 @@
 describe('Delivery SignUp Yassir', () => {
     it('Delivry Man SignUp Test', () => {
-
+    // Go to Yassi Express WebSite
     cy.visit("https://express.yassir.com/");
+
+    // Assert and click on SignUp Delivery man button
     cy.get('body').should('contain','Devenez livreur');
     cy.contains('Devenez livreur').click({ waitForAnimations: false });
+
+    // Fill the Registration Form
     cy.get('.fleet-leftfrm > .form-control').focus().type("TestFName");
     cy.get('.fleet-rightfrm > .form-control').focus().type("TestLName");
     var randInt = Math.floor(Math.random() * 1000);
@@ -18,7 +22,8 @@ describe('Delivery SignUp Yassir', () => {
     cy.get(':nth-child(7) > .form-control').select("Tunis");
     cy.get(':nth-child(8) > .form-control').select("velo");
     cy.get('.fleet-cont > .btn').click();
-    // Test on Toast containing success message
+
+    // Assert on Toast showing and containing success message
     cy.get('.toast-message').should('contain','Driver Added Successfully');
 })
 })
